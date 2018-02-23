@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d9179f9-506b-4d26-9a44-c12f48257542" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/key_token.py" />
       <change beforePath="" afterPath="$PROJECT_DIR$/queue.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/crawler.py" afterPath="$PROJECT_DIR$/crawler.py" />
