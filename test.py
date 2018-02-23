@@ -1,7 +1,17 @@
 import tweepy
 import json
 import key_token
+class Queue:
+    def __init__(self):
+        self.items = []
 
+    def insert(self, x):
+        self.items.append(x)
+        return self.items
+    def pop(self):
+        first =  self.items[0]
+        del self.items[0]
+        return first
 
 auth = tweepy.OAuthHandler(key_token.consumer_key, key_token.consumer_secret)
 auth.set_access_token(key_token.access_token, key_token.access_token_secret)
@@ -16,6 +26,15 @@ for status in stuff:
     # print(t)
     if len(test['entities']['user_mentions']) > 0:
         print(test['entities']['user_mentions'][0]["screen_name"])
+
+queue = Queue()
+print queue #should show something like <__main__.Queue instance at 0x(some numbers here)>
+newQueue = queue.insert(5)
+newQueue = queue.insert("test")
+print newQueue
+print(queue.pop())
+print newQueue[0]
+print(len(newQueue))
 
 # public_tweets = api.home_timeline()
 # for tweet in public_tweets:
